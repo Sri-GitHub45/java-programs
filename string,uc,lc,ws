@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[]){
+        Scanner sa=new Scanner(System.in);
+        int l=0;
+        int d=0;
+        int ws=0;
+        int sc=0;
+        int uc=0;
+        int lc=0;
+        char ch;
+        String s=sa.nextLine();
+        for (int i=0;i<s.length();i++){
+            ch=s.charAt(i);
+            if(Character.isLetter(ch)){
+            l++;
+            if(Character.isUpperCase(ch))
+            uc++;
+            else if(Character.isLowerCase(ch))
+            lc++;
+            }else if(Character.isDigit(ch)){
+            d++;
+            }else if(Character.isWhitespace(ch)){
+            ws++;
+            }else
+            sc++;
+            }
+            System.out.println("letter:"+l);
+             System.out.println("digit:"+d);
+              System.out.println("white space:"+ws);
+               System.out.println("upper case:"+uc);
+                System.out.println("lower case:"+lc);
+                 System.out.println("special character:"+sc);
+    }
+}
